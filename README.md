@@ -10,9 +10,11 @@ npm install web-browser-input --save
 
 ## Use
 
-* `isClickable(element: Element): boolean` — Tells whether a DOM `Element` is clickable.
+* `belongsToClickableElement(element: Element, options?: object): boolean` — Tells whether a DOM `Element` is clickable or is placed inside a clickable DOM `Element`. "Clickable" DOM `Elements` are either `<button/>` or `<a/>`.
+  * `options`:
+    * `stopBefore: Element` — A parent DOM `Element` at which the search should stop (not including it).
 
-* `isKeyboardKey(...keys: string[], event: Event): boolean` — Tells whether a keyboard `event` corresponds to a combination of keyboard `keys`. Example: `isKeyboardKey('Ctrl', 'Shift', 'Space', event) === true/false`.
+* `isKeyCombination(event: Event, keys: string[]): boolean` — Tells whether a keyboard `event` corresponds to a combination of keyboard `keys`. Example: `isKeyCombination(event, ['Ctrl', 'Shift', 'Space']) === true/false`.
 
 * `copyTextToClipboard(text: string)` — Copies text to clipboard.
 

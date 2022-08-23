@@ -1,6 +1,6 @@
 import {
-	isKeyboardkey,
-	isClickable,
+	isKeyCombination,
+	belongsToClickableElement,
 	openLinkInNewTab,
 	copyTextToClipboard
 } from '../index.js'
@@ -8,8 +8,8 @@ import {
 
 describe('exports', function() {
 	it('should export stuff', function() {
-		isKeyboardkey.should.be.a('function')
-		isClickable.should.be.a('function')
+		isKeyCombination.should.be.a('function')
+		belongsToClickableElement.should.be.a('function')
 		openLinkInNewTab.should.be.a('function')
 		copyTextToClipboard.should.be.a('function')
 	})
